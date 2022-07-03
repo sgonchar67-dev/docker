@@ -1,0 +1,6 @@
+version: '3.7'
+services:
+    php8:
+        build: php8
+        volumes:
+            - ../projects:/var/www
