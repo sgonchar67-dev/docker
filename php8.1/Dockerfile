@@ -1,4 +1,4 @@
-FROM php:8.0-fpm
+FROM php:8.1-fpm
 
 RUN pecl install xdebug
 RUN docker-php-ext-enable xdebug
@@ -61,15 +61,10 @@ RUN docker-php-ext-enable imagick
 RUN pecl install redis
 RUN docker-php-ext-enable redis
 
-#COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
-## https://getcomposer.org/doc/03-cli.md#composer-allow-superuser
-#ENV COMPOSER_ALLOW_SUPERUSER=1
-#ENV PATH="${PATH}:/root/.composer/vendor/bin"
-
-#RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
-
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
-ADD ./ /usr/local/etc/php/conf.d/
+
+ADD ./php.ini /usr/local/etc/php/php.ini
+ADD ./conf.d/ /usr/local/etc/php/conf.d/
 
 WORKDIR /var/www
 
