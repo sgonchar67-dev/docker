@@ -6,6 +6,10 @@
 ```shell
 cp .env.dev .env
 ```
+set application directory path 
+```.env
+APP_DIR
+````
 Recreate containers with mysql restore
 
 put any dump.sql to docker/mysql/docker-entrypoint-initdb.d if you need
