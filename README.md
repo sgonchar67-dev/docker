@@ -1,5 +1,8 @@
 # Docker configuration
 
+### Prepare
+#### [install Docker Desktop](https://docs.docker.com/desktop/#download-and-install)
+
 ## Local development
 
 ### Get started!
@@ -17,5 +20,3 @@ put any dump.sql to docker/mysql/docker-entrypoint-initdb.d if you need
 make init
 ```
 
-### Prepare
-#### [install Docker Desktop](https://docs.docker.com/desktop/#download-and-install)
