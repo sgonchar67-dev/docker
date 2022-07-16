@@ -1,0 +1,7 @@
+#version: '3.7'
+
+# Development environment override
+#services:
+#    php:
+#        volumes:
+#            - ./php/php.override.ini:/usr/local/etc/php/conf.d/php.override.ini:ro
