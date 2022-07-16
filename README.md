@@ -8,7 +8,7 @@ cp .env.dev .env
 ```
 set application directory path 
 ```.env
-APP_DIR
+APP_DIR=../app
 ````
 Recreate containers with mysql restore
 
